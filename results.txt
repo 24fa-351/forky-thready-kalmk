@@ -1,175 +1,59 @@
 Pattern 1:
-Process 1 (13014) beginning
-Process 1 creating Process 2
-Process 1 (13014) exiting
-Pattern 1:
-Process 2 (13015) beginning
-Process 2 creating Process 3
-Process 2 (13015) exiting
-Pattern 1:
-Process 3 (13016) beginning
-Process 3 creating Process 4
-Process 3 (13016) exiting
-Pattern 1:
-Process 4 (13017) beginning
-Process 4 creating Process 5
-Process 4 (13017) exiting
-Pattern 1:
-Process 7 (13020) beginning
-Process 7 (13020) exiting
-Pattern 1:
-Process 5 (13018) beginning
-Process 5 creating Process 6
-Process 5 (13018) exiting
-Pattern 1:
-Process 6 (13019) beginning
-Process 6 creating Process 7
-Process 6 (13019) exiting
-Pattern 1:
-
-
-Pattern 1:
-Process 1 (13522) beginning
-Process 2 (13523) beginning
-Process 3 (13524) beginning
-Process 4 (13525) beginning
-Process 5 (13526) beginning
-Process 6 (13527) beginning
-Process 7 (13528) beginning
-Process 8 (13529) beginning
-Process 9 (13530) beginning
-Process 10 (13531) beginning
-Process 11 (13532) beginning
-Process 12 (13533) beginning
-Process 13 (13534) beginning
-Process 14 (13535) beginning
-Process 15 (13536) beginning
-Process 17 (13538) beginning
-Process 16 (13537) beginning
-Process 18 (13539) beginning
-Process 19 (13540) beginning
-Process 20 (13541) beginning
-Process 3 creating Process 4
-Process 3 (13524) exiting
-Process 1 creating Process 2
-Process 1 (13522) exiting
-Process 5 creating Process 6
-Process 5 (13526) exiting
-Process 2 creating Process 3
-Process 2 (13523) exiting
-Process 7 creating Process 8
-Process 7 (13528) exiting
-Process 8 creating Process 9
-Process 8 (13529) exiting
-Process 4 creating Process 5
-Process 4 (13525) exiting
-Process 6 creating Process 7
-Process 6 (13527) exiting
-Process 10 creating Process 11
-Process 11 creating Process 12
-Process 10 (13531) exiting
-Process 11 (13532) exiting
-Process 12 creating Process 13
-Process 12 (13533) exiting
-Process 9 creating Process 10
-Process 9 (13530) exiting
-Process 13 creating Process 14
-Process 13 (13534) exiting
-Process 14 creating Process 15
-Process 14 (13535) exiting
-Process 15 creating Process 16
-Process 15 (13536) exiting
-Process 17 creating Process 18
-Process 17 (13538) exiting
-Process 18 creating Process 19
-Process 18 (13539) exiting
-Process 16 creating Process 17
-Process 16 (13537) exiting
-Process 19 creating Process 20
-Process 19 (13540) exiting
-Process 20 (13541) exiting
-
+Process 1 (56254) beginning
+Process 2 (56255) beginning
+Process 3 (56256) beginning
+Process 2 (56255) exiting
+Process 1 (56254) exiting
+Process 3 (56256) exiting
+main (56253) exiting
 
 Pattern 2:
-Process 1 (13943) beginning
+Process 1 (56393) beginning
 Process 1 creating Process 2
-Process 1 (13943) exiting
-Process 2 (14017) beginning
+Process 2 (56485) beginning
 Process 2 creating Process 3
-Process 2 (14017) exiting
-Process 3 (14103) beginning
-Process 3 creating Process 4
-Process 3 (14103) exiting
-Process 4 (14127) beginning
-Process 4 creating Process 5
-Process 4 (14127) exiting
-Process 5 (14182) beginning
-Process 5 creating Process 6
-Process 5 (14182) exiting
-Process 6 (14197) beginning
-Process 6 creating Process 7
-Process 6 (14197) exiting
-Process 7 (14320) beginning
-Process 7 (14320) exiting
+Process 3 (56552) beginning
+Process 3 (56552) exiting
+Process 2 (56485) exiting
+Process 1 (56393) exiting
+main (56392) exiting
 
+Pattern 1:
+Process 1 (56766) beginning
+Process 2 (56767) beginning
+Process 5 (56770) beginning
+Process 3 (56768) beginning
+Process 4 (56769) beginning
+Process 6 (56771) beginning
+Process 7 (56772) beginning
+Process 1 (56766) exiting
+Process 2 (56767) exiting
+Process 4 (56769) exiting
+Process 6 (56771) exiting
+Process 3 (56768) exiting
+Process 7 (56772) exiting
+Process 5 (56770) exiting
+main (56765) exiting
 
 Pattern 2:
-Process 1 (14495) beginning
+Process 1 (56953) beginning
 Process 1 creating Process 2
-Process 1 (14495) exiting
-Process 2 (14591) beginning
+Process 2 (57027) beginning
 Process 2 creating Process 3
-Process 2 (14591) exiting
-Process 3 (14658) beginning
+Process 3 (57113) beginning
 Process 3 creating Process 4
-Process 3 (14658) exiting
-Process 4 (14686) beginning
+Process 4 (57136) beginning
 Process 4 creating Process 5
-Process 4 (14686) exiting
-Process 5 (14726) beginning
+Process 5 (57192) beginning
 Process 5 creating Process 6
-Process 5 (14726) exiting
-Process 6 (14770) beginning
+Process 6 (57207) beginning
 Process 6 creating Process 7
-Process 6 (14770) exiting
-Process 7 (14860) beginning
-Process 7 creating Process 8
-Process 7 (14860) exiting
-Process 8 (14920) beginning
-Process 8 creating Process 9
-Process 8 (14920) exiting
-Process 9 (14992) beginning
-Process 9 creating Process 10
-Process 9 (14992) exiting
-Process 10 (15007) beginning
-Process 10 creating Process 11
-Process 10 (15007) exiting
-Process 11 (15095) beginning
-Process 11 creating Process 12
-Process 11 (15095) exiting
-Process 12 (15161) beginning
-Process 12 creating Process 13
-Process 12 (15161) exiting
-Process 13 (15241) beginning
-Process 13 creating Process 14
-Process 13 (15241) exiting
-Process 14 (15267) beginning
-Process 14 creating Process 15
-Process 14 (15267) exiting
-Process 15 (15351) beginning
-Process 15 creating Process 16
-Process 15 (15351) exiting
-Process 16 (15440) beginning
-Process 16 creating Process 17
-Process 16 (15440) exiting
-Process 17 (15549) beginning
-Process 17 creating Process 18
-Process 17 (15549) exiting
-Process 18 (15654) beginning
-Process 18 creating Process 19
-Process 18 (15654) exiting
-Process 19 (15742) beginning
-Process 19 creating Process 20
-Process 19 (15742) exiting
-Process 20 (15852) beginning
-Process 20 (15852) exiting
+Process 7 (57329) beginning
+Process 7 (57329) exiting
+Process 6 (57207) exiting
+Process 5 (57192) exiting
+Process 4 (57136) exiting
+Process 3 (57113) exiting
+Process 2 (57027) exiting
+Process 1 (56953) exiting
+main (56952) exiting
