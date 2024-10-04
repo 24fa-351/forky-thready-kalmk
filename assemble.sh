@@ -1,1 +1,1 @@
-gcc -Wall -I headers src/*.c main.c -o run_forky
+gcc -Wall fork.c main.c -o run_forky
