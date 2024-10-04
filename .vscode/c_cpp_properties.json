@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "includePath": [
+                "${workspaceFolder}/headers",
+                "${workspaceFolder}/**" // include all subdirectories
+            ],
+            "name" :""
+        }
+    ],
+    "version": 4
+}
