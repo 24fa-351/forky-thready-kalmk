@@ -9,4 +9,6 @@ void pattern_2(int num_things);
 
 void pattern_3(int num_things);
 
+void process(int id, int total);
+
 #endif
