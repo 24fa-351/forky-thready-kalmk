@@ -7,17 +7,6 @@ Process 1 (56254) exiting
 Process 3 (56256) exiting
 main (56253) exiting
 
-Pattern 2:
-Process 1 (56393) beginning
-Process 1 creating Process 2
-Process 2 (56485) beginning
-Process 2 creating Process 3
-Process 3 (56552) beginning
-Process 3 (56552) exiting
-Process 2 (56485) exiting
-Process 1 (56393) exiting
-main (56392) exiting
-
 Pattern 1:
 Process 1 (56766) beginning
 Process 2 (56767) beginning
@@ -34,6 +23,17 @@ Process 3 (56768) exiting
 Process 7 (56772) exiting
 Process 5 (56770) exiting
 main (56765) exiting
+
+Pattern 2:
+Process 1 (56393) beginning
+Process 1 creating Process 2
+Process 2 (56485) beginning
+Process 2 creating Process 3
+Process 3 (56552) beginning
+Process 3 (56552) exiting
+Process 2 (56485) exiting
+Process 1 (56393) exiting
+main (56392) exiting
 
 Pattern 2:
 Process 1 (56953) beginning
@@ -57,3 +57,6 @@ Process 3 (57113) exiting
 Process 2 (57027) exiting
 Process 1 (56953) exiting
 main (56952) exiting
+
+
+

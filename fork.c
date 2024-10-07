@@ -26,28 +26,27 @@ void run(int num_things, int pattern)
         break;
     case 3:
         printf("Pattern 3:\n");
-        pattern_3(1, num_things);
+        pattern_3(num_things);
         break;
     }
 }
 
 // fork multiple processes from the main
-void pattern_1(int num_things /*num of child processes to create*/)
+void pattern_1(int num_things)
 {
-    for (int i = 1; i <= num_things; ++i) // create child processes
+    for (int i = 1; i <= num_things; ++i)
     {
         pid_t pid = fork();
-        if (pid == 0) // only the children can run this block
+        if (pid == 0)
         {
             printf("Process %d (%d) beginning\n", i, getpid());
             sleep(sleep_time());
 
             printf("Process %d (%d) exiting\n", i, getpid());
-            exit(0); // terminate the child process
+            exit(0);
         }
     }
 
-    // meanwhile, the parent should wait for all the multiple children to finish
     for (int i = 1; i <= num_things; ++i)
     {
         wait(NULL);
@@ -62,7 +61,7 @@ void pattern_2(int num_things)
     for (int i = 1; i <= num_things; ++i)
     {
         pid_t pid = fork();
-        if (pid == 0) // only the children can run this block
+        if (pid == 0)
         {
             printf("Process %d (%d) beginning\n", i, getpid());
             sleep(sleep_time());
@@ -72,68 +71,40 @@ void pattern_2(int num_things)
                 printf("Process %d creating Process %d\n", i, i + 1);
             }
 
-            if (i == num_things) // the last child terminates the chain, this
-                                 // will make other parents in the else block in
-                                 // wait(NULL) to exit the loop
+            if (i == num_things)
             {
                 printf("Process %d (%d) exiting\n", i, getpid());
-                exit(0); // exit without creating another child
+                exit(0);
             }
         }
-        else // parent creates one child and wait for it to finish before
-             // exiting, while the child creates another child
+        else
         {
             wait(NULL);
             if (i - 1 == 0)
             {
                 printf("main (%d) exiting\n", getpid());
-                break; // for the main
+                break;
             }
             else
             {
                 printf("Process %d (%d) exiting\n", i - 1, getpid());
-                exit(0); // for the children to exit
+                exit(0);
             }
         }
     }
 }
 
-void pattern_3(int current_depth, int max_depth)
+// i tried <_<
+void pattern_3(int current_depth)
 {
-    if (current_depth > max_depth)
-        return;
-
-    printf("Process %d (PID: %d, parent PID: %d) beginning\n", current_depth, getpid(), getppid());
-    
-    // Sleep for a random number of seconds between 1 and 8
-    sleep(sleep_time());
-
-    if (current_depth < max_depth)
+    pid_t pid_1 = fork();
+    if (pid_1 == 0)
     {
-        // Create the left child
-        pid_t pid_left = fork();
-        if (pid_left == 0) // Left child process
+        sleep(sleep_time);
+        pid_t pid_2 = fork();
+        if (pid_2 == 0)
         {
-            printf("Process %d (PID: %d) creating Process %d (Left child)\n", current_depth, getpid(), current_depth + 1);
-            pattern_3(current_depth + 1, max_depth); // Recursive call to create the next level
-            printf("Process %d (PID: %d) exiting\n", current_depth + 1, getpid());
-            return; // Ensure the left child terminates after creating its children
+            sleep(sleep_time);
         }
-
-        // Create the right child
-        pid_t pid_right = fork();
-        if (pid_right == 0) // Right child process
-        {
-            printf("Process %d (PID: %d) creating Process %d (Right child)\n", current_depth, getpid(), current_depth + 1);
-            pattern_3(current_depth + 1, max_depth); // Recursive call to create the next level
-            printf("Process %d (PID: %d) exiting\n", current_depth + 1, getpid());
-            return; // Ensure the right child terminates after creating its children
-        }
-
-        // The parent process waits for both left and right children to finish
-        wait(NULL); // Wait for the left child
-        wait(NULL); // Wait for the right child
     }
-
-    printf("Process %d (PID: %d) exiting\n", current_depth, getpid());
 }
