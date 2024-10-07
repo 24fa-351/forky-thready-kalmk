@@ -26,7 +26,7 @@ void run(int num_things, int pattern)
         break;
     case 3:
         printf("Pattern 3:\n");
-        // pattern_3(num_things);
+        pattern_3(1, num_things);
         break;
     }
 }
@@ -96,4 +96,44 @@ void pattern_2(int num_things)
             }
         }
     }
+}
+
+void pattern_3(int current_depth, int max_depth)
+{
+    if (current_depth > max_depth)
+        return;
+
+    printf("Process %d (PID: %d, parent PID: %d) beginning\n", current_depth, getpid(), getppid());
+    
+    // Sleep for a random number of seconds between 1 and 8
+    sleep(sleep_time());
+
+    if (current_depth < max_depth)
+    {
+        // Create the left child
+        pid_t pid_left = fork();
+        if (pid_left == 0) // Left child process
+        {
+            printf("Process %d (PID: %d) creating Process %d (Left child)\n", current_depth, getpid(), current_depth + 1);
+            pattern_3(current_depth + 1, max_depth); // Recursive call to create the next level
+            printf("Process %d (PID: %d) exiting\n", current_depth + 1, getpid());
+            return; // Ensure the left child terminates after creating its children
+        }
+
+        // Create the right child
+        pid_t pid_right = fork();
+        if (pid_right == 0) // Right child process
+        {
+            printf("Process %d (PID: %d) creating Process %d (Right child)\n", current_depth, getpid(), current_depth + 1);
+            pattern_3(current_depth + 1, max_depth); // Recursive call to create the next level
+            printf("Process %d (PID: %d) exiting\n", current_depth + 1, getpid());
+            return; // Ensure the right child terminates after creating its children
+        }
+
+        // The parent process waits for both left and right children to finish
+        wait(NULL); // Wait for the left child
+        wait(NULL); // Wait for the right child
+    }
+
+    printf("Process %d (PID: %d) exiting\n", current_depth, getpid());
 }
