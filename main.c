@@ -5,6 +5,11 @@
 
 int main(int argc, char *argv[])
 {
+    if (argc != 3)
+    {
+        printf("Usage: %s <num_things> <pattern>\n", argv[0]);
+        return -1;
+    }
     int num_things = atoi(argv[1]);
     int pattern = atoi(argv[2]);
 
