@@ -34,20 +34,20 @@ void run(int num_things, int pattern)
 // fork multiple processes from the main
 void pattern_1(int num_things)
 {
-    for (int i = 1; i <= num_things; ++i)
+    for (int ix = 1; ix <= num_things; ++ix)
     {
         pid_t pid = fork();
         if (pid == 0)
         {
-            printf("Process %d (%d) beginning\n", i, getpid());
+            printf("Process %d (%d) beginning\n", ix, getpid());
             sleep(sleep_time());
 
-            printf("Process %d (%d) exiting\n", i, getpid());
+            printf("Process %d (%d) exiting\n", ix, getpid());
             exit(0);
         }
     }
 
-    for (int i = 1; i <= num_things; ++i)
+    for (int ix = 1; ix <= num_things; ++ix)
     {
         wait(NULL);
     }
@@ -58,36 +58,36 @@ void pattern_1(int num_things)
 // fork chain of processes from child to child
 void pattern_2(int num_things)
 {
-    for (int i = 1; i <= num_things; ++i)
+    for (int ix = 1; ix <= num_things; ++ix)
     {
         pid_t pid = fork();
         if (pid == 0)
         {
-            printf("Process %d (%d) beginning\n", i, getpid());
+            printf("Process %d (%d) beginning\n", ix, getpid());
             sleep(sleep_time());
 
-            if (i < num_things)
+            if (ix < num_things)
             {
-                printf("Process %d creating Process %d\n", i, i + 1);
+                printf("Process %d creating Process %d\n", ix, ix + 1);
             }
 
-            if (i == num_things)
+            if (ix == num_things)
             {
-                printf("Process %d (%d) exiting\n", i, getpid());
+                printf("Process %d (%d) exiting\n", ix, getpid());
                 exit(0);
             }
         }
         else
         {
             wait(NULL);
-            if (i - 1 == 0)
+            if (ix - 1 == 0)
             {
                 printf("main (%d) exiting\n", getpid());
                 break;
             }
             else
             {
-                printf("Process %d (%d) exiting\n", i - 1, getpid());
+                printf("Process %d (%d) exiting\n", ix - 1, getpid());
                 exit(0);
             }
         }
@@ -97,14 +97,14 @@ void pattern_2(int num_things)
 // i tried <_<
 void pattern_3(int current_depth)
 {
-    pid_t pid_1 = fork();
-    if (pid_1 == 0)
-    {
-        sleep(sleep_time);
-        pid_t pid_2 = fork();
-        if (pid_2 == 0)
-        {
-            sleep(sleep_time);
-        }
-    }
+    // pid_t pid_1 = fork();
+    // if (pid_1 == 0)
+    // {
+    //     sleep(sleep_time);
+    //     pid_t pid_2 = fork();
+    //     if (pid_2 == 0)
+    //     {
+    //         sleep(sleep_time);
+    //     }
+    // }
 }
