@@ -7,13 +7,13 @@ int main(int argc, char *argv[])
 {
     if (argc != 3)
     {
-        printf("Usage: %s <num_things> <pattern>\n", argv[0]);
+        printf("Usage: %s <num_of_processes> <pattern>\n", argv[0]);
         return -1;
     }
-    int num_things = atoi(argv[1]);
+    int num_of_processes = atoi(argv[1]);
     int pattern = atoi(argv[2]);
 
-    if (!(num_things > 1 || num_things < 256))
+    if (!(num_of_processes > 1 || num_of_processes < 256))
     {
         printf("Invalid number of processes.\n");
         return -1;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    run(num_things, pattern);
+    run(num_of_processes, pattern);
 
     return 0;
 }
