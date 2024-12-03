@@ -63,17 +63,19 @@ void pattern_2_child_process(int process_num, int num_of_processes)
         if (pid == 0)
         {
             pattern_2_child_process(process_num + 1, num_of_processes);
-        } else if (pid > 0)
+        }
+        else if (pid > 0)
         {
             sleep(time);
-            fprintf(stderr, "Child process %d (%d) exiting\n", process_num, getpid());
+            fprintf(stderr, "Child process %d (%d) exiting\n", process_num,
+                    getpid());
             exit(0);
-
-        } else {
+        }
+        else
+        {
             fprintf(stderr, "Error forking child process %d\n", process_num);
         }
     }
-
 }
 
 // fork chain of processes from child to child
@@ -85,13 +87,16 @@ void pattern_2(int num_of_processes)
     if (pid == 0)
     {
         pattern_2_child_process(start_process_num + 1, num_of_processes);
-    } else if (pid > 0)
+    }
+    else if (pid > 0)
     {
         fprintf(stderr, "Parent process (%d) beginning\n", getpid());
         sleep(sleep_time());
         fprintf(stderr, "Parent process (%d) exiting\n", getpid());
         exit(0);
-    } else {
+    }
+    else
+    {
         fprintf(stderr, "Error forking parent process\n");
     }
 }
