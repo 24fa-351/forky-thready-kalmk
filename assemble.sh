@@ -1,0 +1,1 @@
+gcc -Wall fork.c main.c -o run_forky

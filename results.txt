@@ -1,0 +1,62 @@
+Pattern 1:
+Process 1 (56254) beginning
+Process 2 (56255) beginning
+Process 3 (56256) beginning
+Process 2 (56255) exiting
+Process 1 (56254) exiting
+Process 3 (56256) exiting
+main (56253) exiting
+
+Pattern 1:
+Process 1 (56766) beginning
+Process 2 (56767) beginning
+Process 5 (56770) beginning
+Process 3 (56768) beginning
+Process 4 (56769) beginning
+Process 6 (56771) beginning
+Process 7 (56772) beginning
+Process 1 (56766) exiting
+Process 2 (56767) exiting
+Process 4 (56769) exiting
+Process 6 (56771) exiting
+Process 3 (56768) exiting
+Process 7 (56772) exiting
+Process 5 (56770) exiting
+main (56765) exiting
+
+Pattern 2:
+Process 1 (56393) beginning
+Process 1 creating Process 2
+Process 2 (56485) beginning
+Process 2 creating Process 3
+Process 3 (56552) beginning
+Process 3 (56552) exiting
+Process 2 (56485) exiting
+Process 1 (56393) exiting
+main (56392) exiting
+
+Pattern 2:
+Process 1 (56953) beginning
+Process 1 creating Process 2
+Process 2 (57027) beginning
+Process 2 creating Process 3
+Process 3 (57113) beginning
+Process 3 creating Process 4
+Process 4 (57136) beginning
+Process 4 creating Process 5
+Process 5 (57192) beginning
+Process 5 creating Process 6
+Process 6 (57207) beginning
+Process 6 creating Process 7
+Process 7 (57329) beginning
+Process 7 (57329) exiting
+Process 6 (57207) exiting
+Process 5 (57192) exiting
+Process 4 (57136) exiting
+Process 3 (57113) exiting
+Process 2 (57027) exiting
+Process 1 (56953) exiting
+main (56952) exiting
+
+
+
