@@ -67,8 +67,12 @@ void pattern_2_child_process(int process_num, int num_of_processes)
         else if (pid > 0)
         {
             sleep(time);
+            fprintf(stderr, "Child process %d (%d) creating Child %d (%d)\n",
+                    process_num, getpid(), process_num + 1, pid);
+
             fprintf(stderr, "Child process %d (%d) exiting\n", process_num,
                     getpid());
+
             exit(0);
         }
         else
